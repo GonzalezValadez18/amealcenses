@@ -1,0 +1,598 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-color: #eeeeee;
+    padding: 20px;
+    text-align: center;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+header img {
+    margin-right: 20px;
+    width: 150px;
+}
+header .home-button, header .nav-link {
+    margin-right: 40px;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+    font-weight: bold;
+    text-decoration: none;
+    color: #003A5D;
+}
+.rounded-frame {
+    padding: 10px;
+    border: 2px solid #003A5D;
+    border-radius: 15px;
+    width: 160px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; 
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: fixed;
+    margin-right: 0%;
+    right: 0; 
+    background-color: #eeeeee;
+    min-width: 40px; 
+    z-index: 1;
+    border: 1px solid #ccc; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.dropdown-content img {
+    width: 5px; 
+}
+
+.dropdown-content a {
+    color: #003A5D;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropbtn {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #003A5D;
+    border-radius: 15%;
+    background-color: white;
+    color: #003A5D;
+    cursor: pointer;
+}
+.dropbtn:hover {
+    background-color: #003A5D;
+    color: white;
+}
+.dropbtn i {
+    margin-right: 5px;
+    color: #003A5D;
+}
+.blue-box {
+    border-radius: 15px;
+    background-color: #59849b;
+    display: flex;
+    height: 60px;
+    text-align: left;
+}
+.blue-box .column {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    color: white;
+}
+.blue-box .column:first-child {
+    background-color: #59849b;
+}
+.blue-box .column:nth-child(2),
+.blue-box .column:nth-child(3) {
+    background-color: #8ea4aa;
+}
+.blue-frame {
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 15px;
+    border: 2px solid #59849b;
+    color: #59849b;
+    text-align: center;
+    height: 300px;
+    position: relative;
+    transition: height 0.3s ease;
+}
+.columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.columns .column {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px;
+    text-align: left;
+    color: #003A5D;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th {
+    background-color: #59849b;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+td {
+    padding: 10px;
+    text-align: left;
+    color: black;
+}
+table, th, td {
+    border: none;
+}
+.frame {
+    border: 2px solid #59849b;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+}
+.frame-full-height {
+    height: 100px;
+    text-align: center;
+}
+.frame-half-height {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.btn-regresar {
+    text-align: center;
+    margin-top: 20px;
+}
+.btn-regresar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #59849b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-regresar button:hover {
+    background-color: #0056b3;
+}
+.tarjetas-bancarias {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.tarjetas-bancarias p {
+    margin-right: 10px;
+}
+.tarjetas-bancarias img {
+    margin-left: 10px;
+    width: 50px;
+}
+footer {
+    background-color: #eeeeee;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+footer .footer-link {
+    margin: 0 10px;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+    font-weight: bold;
+    text-decoration: none;
+    color: #003A5D;
+}
+footer .social-links {
+    display: flex;
+    justify-content: center;
+}
+footer .social-links img {
+    width: 20px;
+    margin: 0 10px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+.modal-content {
+    background: linear-gradient(to top, #999, white);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.modal-content img {
+    width: 100px;
+    height: auto;
+    margin: 0 auto 20px 0;
+    display: block;
+}
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+.modal-content form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #656463;
+}
+.modal-content label {
+    display: block;
+    margin-bottom: 5px;
+}
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.modal-content input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+}
+.modal-content input[type="submit"]:hover {
+    background-color: #023540;
+}
+.modal-content .links {
+    margin-top: 20px;
+    text-align: start;
+    font-size: 18px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.modal-content .links a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin-top: 10px;
+    text-align: left !important;
+}
+.modal-content .links a:hover {
+    text-decoration: underline;
+}
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.toggle-button {
+    background: none;
+    border: none;
+    color: #003A5D;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.blue-frame .toggle-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.details {
+    display: none;
+}
+.blue-frame.expanded {
+    height: auto;
+}
+.blue-frame.collapsed {
+    height: 100px;
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        height: auto;
+        justify-content: space-between;
+    }
+    header img {
+        width: 100px;
+        margin-bottom: 0;
+    }
+    header .home-button, header .nav-link {
+        margin-right: 10px;
+        margin-top: 0;
+        font-size: 14px;
+    }
+    .rounded-frame {
+        width: 120px;
+        height: 40px;
+    }
+    .blue-box {
+        flex-direction: column;
+        height: auto;
+    }
+    .blue-box .column {
+        margin-bottom: 10px;
+    }
+    .columns {
+        flex-direction: column;
+    }
+    .columns .column {
+        margin: 10px 0;
+    }
+    .blue-frame {
+        height: auto;
+    }
+    .frame-full-height {
+        height: auto;
+    }
+    .frame-half-height {
+        height: auto;
+    }
+    .btn-regresar button {
+        width: 100%;
+    }
+    .tarjetas-bancarias {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .tarjetas-bancarias p {
+        margin-right: 10px;
+    }
+    .tarjetas-bancarias img {
+        margin: 0 5px;
+        width: 40px;
+    }
+    footer {
+        flex-direction: column;
+    }
+    footer .footer-link {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    footer .social-links img {
+        width: 20px;
+        margin: 0 10px;
+        margin-top: 20px;
+    }
+    .table-responsive {
+        overflow-x: auto;
+        margin: 0 auto;
+        max-width: 60%;
+    }
+    table {
+        border-radius: 15px;
+        overflow: hidden;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+    table thead {
+        display: none;
+    }
+    table tr {
+        display: block;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+    table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        text-align: left;
+        color: black;
+        border: 1px solid #59849b;
+        width: 100%;
+    }
+    table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #59849b;
+        flex: 1;
+        text-align: left;
+    }
+    table td:last-child {
+        flex: 2;
+    }
+    header .nav-link {
+        display: none;
+    }
+    .blue-box .column:first-child,
+    .blue-box .column:last-child {
+        display: none;
+    }
+    footer .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .footer-link {
+        margin: 5px 0;
+    }
+    footer .social-links {
+        margin-top: 20px;
+    }
+    .dropdown:nth-of-type(3) {
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+    header {
+        height: auto;
+        padding: 10px;
+        justify-content: space-between;
+    }
+    header img {
+        width: 80px;
+    }
+    header .home-button, header .nav-link {
+        margin-right: 10px;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    .rounded-frame {
+        width: 100px;
+        height: 30px;
+    }
+    .blue-box {
+        padding: 10px;
+    }
+    .blue-box .column {
+        font-size: 14px;
+    }
+    .blue-frame {
+        padding: 10px;
+    }
+    .columns .column {
+        padding: 5px;
+        font-size: 14px;
+    }
+    table th, table td {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .btn-regresar button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    .tarjetas-bancarias {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .tarjetas-bancarias p {
+        margin-right: 10px;
+    }
+    .tarjetas-bancarias img {
+        margin: 0 5px;
+        width: 40px;
+    }
+    footer {
+        flex-direction: column;
+    }
+    footer .footer-link {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    footer .social-links img {
+        width: 20px;
+        margin: 0 10px;
+        margin-top: 20px;
+    }
+    .table-responsive {
+        overflow-x: auto;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    table {
+        border-radius: 15px;
+        overflow: hidden;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+    table thead {
+        display: none;
+    }
+    table tr {
+        display: block;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+    table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        text-align: left;
+        color: black;
+        border: 1px solid #59849b;
+        width: 100%;
+    }
+    table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #59849b;
+        flex: 1;
+        text-align: left;
+    }
+    table td:last-child {
+        flex: 2;
+    }
+    header .nav-link {
+        display: none;
+    }
+    .blue-box .column:first-child,
+    .blue-box .column:last-child {
+        display: none;
+    }
+}

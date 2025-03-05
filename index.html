@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifique sus datos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="recursos/logo_amealcenses.png" alt="Boton de home">
+        <a href="#" class="home-button"><i class="fas fa-home"></i></a>
+        <a href="#" class="nav-link">Paqueteria</a>
+        <a href="#" class="nav-link">Factura tu viaje</a>
+        <a href="#" class="nav-link">Imprime tu viaje de abordar</a>
+        <a href="#" class="nav-link">Modifica tu itinerario</a>
+        <div class="rounded-frame" id="openModal">
+            <img src="recursos/logo-travel-pass.png" alt="Imagen en el marco">
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fas fa-bars"></i></button>
+            <div class="dropdown-content">
+                <a href="#">BOLETOS DE AUTOBUS</a>
+                <a href="#">RENTA DE AUTOBUSES</a>
+                <a href="#">DESTINOS</a>
+                <a href="#">TERMINALES</a>
+                <a href="#">SERVICIOS A BORDO</a>
+                <a href="#">PROMOCIONES</a>
+                <a href="#">AGENCIAS</a>
+                <a href="#">PAGOS REFERENCIADOS</a>
+                <a href="#">VIAJERO ANTICIPADO</a>
+                <a href="#">VIAJERO PROTEGIDO</a>
+                <a href="#">VIAJA MAS</a>
+                <a href="#">VIAJA AHORRANDO</a>
+                <a href="#">BLOG</a>
+                <a href="#">OTROS SERVICIOS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><img src="recursos/mexico.png" alt="Imagen Desplegable" style="width: 50px;"></button>
+            <div class="dropdown-content">
+                <a href="#"><img src="recursos/usa.webp" alt="Imagen Desplegable" style="width: 40px;"></a>
+            </div>
+        </div>
+    </header>
+    <div class="blue-box">
+        <div class="column">
+            <p>Detalles de compra</p>
+        </div>
+        <div class="column">
+            <p>Paso 3 de 3</p>
+        </div>
+        <div class="column">
+            <p>Tiempo restante: 05:00 min</p>
+        </div>
+    </div>
+    <div class="blue-frame collapsed" id="viaje-ida">
+        <h2>VIAJE DE IDA <br> Revisa tus datos</h2>
+        <button class="toggle-button" onclick="toggleDetails('viaje-ida')">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="details">
+            <div class="columns">
+                <div class="column">
+                    <p>Fecha: Sabado 22/feb/2025<br>
+                        Marca: TRANSPORTES AMEALCENSES S.A. DE C.V.
+                    </p>
+                </div>
+                <div class="column">
+                    <p>De: <strong>San Juan del Rio</strong><br>
+                        Hora de salida: 7:20 a.m
+                    </p>
+                </div>
+                <div class="column">
+                    <p>A: <strong>Queretaro</strong><br>
+                        Hora de llegada: 8:20 a.m
+                    </p>
+                </div>
+                <div class="column">
+                    <p>Autobus: Un position<br>
+                        Servicio Local
+                    </p>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PASAJERO</th>
+                            <th>T. PASAJERO</th>
+                            <th>ASIENTO</th>
+                            <th>PRECIO</th>
+                            <th>IVA</th>
+                            <th>TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="PASAJERO">Jose Valadez</td>
+                            <td data-label="T. PASAJERO">Adulto</td>
+                            <td data-label="ASIENTO">17</td>
+                            <td data-label="PRECIO">$64.66 MXN</td>
+                            <td data-label="IVA">$10.34 MXN</td>
+                            <td data-label="TOTAL"><strong>$75.00 MXN</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="blue-frame collapsed" id="viaje-regreso">
+        <h2>VIAJE DE REGRESO <br> Revisa tus datos</h2>
+        <button class="toggle-button" onclick="toggleDetails('viaje-regreso')">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="details">
+            <div class="columns">
+                <div class="column">
+                    <p>Fecha: Sabado 22/feb/2025<br>
+                        Marca: TRANSPORTES AMEALCENSES S.A. DE C.V.
+                    </p>
+                </div>
+                <div class="column">
+                    <p>De: <strong>San Juan del Rio</strong><br>
+                        Hora de salida: 7:20 a.m
+                    </p>
+                </div>
+                <div class="column">
+                    <p>A: <strong>Queretaro</strong><br>
+                        Hora de llegada: 8:20 a.m
+                    </p>
+                </div>
+                <div class="column">
+                    <p>Autobus: Un position<br>
+                        Servicio Local
+                    </p>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PASAJERO</th>
+                            <th>T. PASAJERO</th>
+                            <th>ASIENTO</th>
+                            <th>PRECIO</th>
+                            <th>IVA</th>
+                            <th>TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="PASAJERO">Jose Valadez</td>
+                            <td data-label="T. PASAJERO">Adulto</td>
+                            <td data-label="ASIENTO">17</td>
+                            <td data-label="PRECIO">$64.66 MXN</td>
+                            <td data-label="IVA">$10.34 MXN</td>
+                            <td data-label="TOTAL"><strong>$75.00 MXN</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="columns">
+        <div class="column">
+            <div class="frame frame-full-height">
+                <p>Importe total a pagar:</p>
+                <h2>$150.00 MXN</h2>
+            </div>
+        </div>
+        <div class="column" style="flex: 3;">
+            <div class="frame frame-half-height">
+                <p>ELIGE TU FORMA DE PAGO</p>
+            </div>
+            <div class="frame frame-half-height">
+                <div class="tarjetas-bancarias">
+                    <p>TARJETAS BANCARIAS</p>
+                    <a href="#visa"><img src="recursos/Visa-logo-4E32B49D4A-seeklogo.com.png" alt="Visa" style="width: 50px;"></a>
+                    <a href="#mc"><img src="recursos/master-card-logo.png" alt="MasterCard" style="width: 50px;"></a>
+                    <a href="#ae"><img src="recursos/American-Express-American-Airlines-Simbolo.png" alt="American Express" style="width: 50px;"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-regresar">
+        <button>Regresar</button>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <a href="#" class="footer-link">¿QUIENES SOMOS?</a>
+            <a href="#" class="footer-link">PREGUNTAS FRECUENTES</a>
+            <a href="#" class="footer-link">CERTIFICADOS</a>
+            <a href="#" class="footer-link">BOLSA DE TRABAJO</a>
+            <a href="#" class="footer-link">AVISO DE PRIVACIDAD</a>
+            <a href="#" class="footer-link">TERMINOS Y CONDICIONES</a>
+        </div>
+        <div class="social-links">
+            <a href="#"><img src="recursos/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="recursos/logotipo-de-twitter-sobre-fondo-negro.png" alt="Twitter"></a>
+            <a href="#"><img src="recursos/logotipo-de-instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="recursos/youtube.png" alt="Youtube"></a>
+        </div>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="recursos/logo-travel-pass.png" alt="Formulario Imagen">
+            <h2>Iniciar Sesión</h2>
+            <form>
+                <label for="email">Correo electrónico:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Contraseña:</label><br>
+                <input type="text" id="contrasena" name="password"><br>
+                <input type="submit" value="Iniciar Sesión">
+            </form>
+            <div class="links">
+                <a href="#">Conoce aqui <strong>¿Qué es Travel Pass?</strong></a>
+                <a href="#">¿No tienes una cuenta? <strong>Regístrate</strong></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
